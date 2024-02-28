@@ -1,0 +1,38 @@
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .featuredDocumentaryCard {
+    position: relative;
+    display: flex; 
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%; 
+    height: 300px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+  }
+  
+  .documentaryImage {
+    width: 40%; 
+    height: 100%; 
+    border-radius: 8px 0 0 8px; 
+    object-fit: cover; 
+  }
+  
+  .overlay {
+    flex-grow: 1; 
+    padding: 16px; 
+    color: #fff;
+    text-align: left;
+  }
+  
+  .documentaryDetails {
+    text-align: left;
+  }
+  
+  
+  
