@@ -1,0 +1,32 @@
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .documentaryCardsContainer {
+    display: flex;
+    gap: 16px;
+    justify-content: space-around; 
+  }
+  
+  .documentaryCard {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    width: 200px; 
+  }
+  
+  .documentaryImage {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+  }
+  
+  .documentaryDetails {
+    text-align: left;
+  }
+  
+ 
+  
