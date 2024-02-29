@@ -18,17 +18,17 @@ const Navbar = () => {
       <ul className={styles.navList}>
         <li className={styles.navItem}>
           <Link href="/">
-            <span>Home</span>
+            Home
           </Link>
         </li>
         <li className={styles.navItem}>
           <Link href="/lo-nuevo">
-            <span>Lo Nuevo</span>
+            Lo Nuevo
           </Link>
         </li>
         <li className={styles.navItem}>
           <Link href="/lo-popular">
-            <span>Lo Popular</span>
+            Lo Popular
           </Link>
         </li>
       </ul>
