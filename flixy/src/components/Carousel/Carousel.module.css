@@ -1,0 +1,61 @@
+/* Carousel.module.css */
+
+.carouselContainer {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .carouselWrapper {
+    overflow: hidden;
+  }
+  
+  .carouselTitle {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .carouselSlide {
+    position: relative;
+    height: 300px;
+  }
+  
+  .carouselSlide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Carousel.module.css */
+
+/* Carousel.module.css */
+
+.carouselTextOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    color: #fff; /* Color del texto, ajusta según el fondo de tu imagen */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 20px;
+  }
+  
+  .carouselTextOverlay h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .carouselTextOverlay p {
+    font-size: 14px;
+    margin: 0; /* Elimina el margen predeterminado */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  
+  
+  

@@ -16,6 +16,7 @@ import Navbar from '../components/Navbar/navbar';
 
 //componentes de Sergio
 import NewDocumentary from '../components/NewDocumentary/NewDocumentary';
+import Carousel from '@/components/Carousel/Carousel';
 
 const NewDocumentaryList = [{titulo:"Documental 1"}, {titulo:"Documental 2"}]
 
@@ -109,8 +110,10 @@ const Home = () => {
   return (
     <div>
       <Navbar />
+      <Carousel/>
       <h1>Mundo Documental</h1>
       <p>En un solo lugar</p>
+
       <div>
         <SearchBar onSearch={handleSearch} onClearSearch={handleClearSearch} />
       </div>
