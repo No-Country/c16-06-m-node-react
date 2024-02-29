@@ -12,6 +12,7 @@ import Carousel from '@/components/Carousel/Carousel';
 import {Funnel} from "@phosphor-icons/react/dist/ssr"
 import styles from './page.module.css';
 import data from '@/data/data';
+import IndieDocumentary from '../components/IndieDocumentary/IndieDocumentary';
 
 const NewDocumentaryList = [{titulo:"Documental 1"}, {titulo:"Documental 2"}]
 
@@ -103,7 +104,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className={styles.mainDiv}>
       {/* <Navbar /> */}
       <Carousel/>
       <h1>Mundo Documental</h1>
@@ -163,6 +164,7 @@ const Home = () => {
       />
 <TopDocumentary/>
       <NewDocumentary documentaryList={NewDocumentaryList} />
+      <IndieDocumentary/>
     </div>
   );
 };

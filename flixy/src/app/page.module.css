@@ -203,6 +203,10 @@
   }
 }
 
+.mainDiv {
+  background-color: var(--neutral-50);
+}
+
 .documentaryList {
   display: flex;
   flex-wrap: wrap;
