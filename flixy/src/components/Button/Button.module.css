@@ -1,8 +1,11 @@
 .button {
-    padding: 10px 20px;
+    padding: 10px 25px;
+    font-size: var(--button);
+    font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
     transition: border 500ms ease, color 500ms ease, background-color 500ms ease, color 500ms ease;
+    position: relative;
 }
 
 .btn1 {
@@ -37,6 +40,7 @@
 
 .btn2:hover {
     background-color: var(--primary-100);
+    color: var(--primary-900);
 }
 
 .btn2:focus {
