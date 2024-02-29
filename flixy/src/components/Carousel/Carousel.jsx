@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const Carousel = () => {
   const selectedDocumentaries = data.filter(
-    (documentary) => [25, 52, 37].includes(documentary.id)
+    (documentary) => [25, 52, 37, 45, 33, 15].includes(documentary.id)
   );
 
   const carouselSettings = {
@@ -17,14 +17,16 @@ const Carousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,  // Agrega esta propiedad para habilitar el autoplay
+    autoplaySpeed: 3000,  // Configura la velocidad de cambio en milisegundos (3 segundos en este ejemplo)
   };
 
   return (
     <div className={styles.carouselContainer}>
-      <h2 className={styles.carouselTitle}>Documentales Destacados</h2>
       <Slider {...carouselSettings}>
         {selectedDocumentaries.map((documentary) => (
           <div key={documentary.id} className={styles.carouselSlide}>
+            {/* Contenido del slide */}
             <img src={documentary.image2} alt={documentary.title} />
             <div className={styles.carouselTextOverlay}>
               <h3>{documentary.nameOriginal}</h3>

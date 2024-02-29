@@ -1,22 +1,17 @@
 'use client'
 import React, { useState } from 'react';
-import SearchBar from '../components/SearchBar/SearchBar';
-import DocumentaryCard from '../components/CardDocumentary/CardDocumentary';
-import Pagination from '../components/Pagination/Pagination';
-import Filter from '../components/Filter/Filter';
-import StreamingFilter from '../components/StreamingFilter/StreamingFilter';
+import SearchBar from '@/components/SearchBar/SearchBar';
+import DocumentaryCard from '@/components/CardDocumentary/CardDocumentary';
+import Pagination from '@/components/Pagination/Pagination';
+import Filter from '@/components/Filter/Filter';
+import StreamingFilter from '@/components/StreamingFilter/StreamingFilter';
 import TopDocumentary from '@/components/TopDocumentary/TopDocumentary';
+import Navbar from '@/components/NavBar/NavBar';
+import NewDocumentary from '@/components/NewDocumentary/NewDocumentary';
+import Carousel from '@/components/Carousel/Carousel';
 import {Funnel} from "@phosphor-icons/react/dist/ssr"
 import styles from './page.module.css';
 import data from '@/data/data';
-
-// componentes de Angel 
-import Navbar from '../components/Navbar/navbar';
-
-
-//componentes de Sergio
-import NewDocumentary from '../components/NewDocumentary/NewDocumentary';
-import Carousel from '@/components/Carousel/Carousel';
 
 const NewDocumentaryList = [{titulo:"Documental 1"}, {titulo:"Documental 2"}]
 
