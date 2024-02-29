@@ -121,8 +121,8 @@ const Home = () => {
           <SearchBar onSearch={handleSearch} onClearSearch={handleClearSearch} />
         </div>
 
-        <div>
-          <div className={styles.filters} style={{ display: 'flex', gap: '10px' }}>
+        <div className={styles.filterSection}>
+          <div className={styles.filters} style={{ display: 'flex', gap: '70px' }}>
             <h3><Funnel size={32} /></h3>
             <Filter
               label="Año"

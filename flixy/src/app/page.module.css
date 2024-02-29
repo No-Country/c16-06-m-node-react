@@ -257,6 +257,13 @@
   margin-top: 10px;
 }
 
+.filterSection {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 70px;
+  padding-bottom: 30px;
+}
+
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
