@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MagnifyingGlass } from "@phosphor-icons/react/dist/ssr";
-import styles from './searchbar.module.css';
+import styles from './SearchBar.module.css';
 
 const SearchBar = ({ onSearch, onClearSearch }) => {
   const [query, setQuery] = useState('');
@@ -43,11 +43,13 @@ const SearchBar = ({ onSearch, onClearSearch }) => {
           <MagnifyingGlass size={24} />
         </button>
       </form>
+
+      {/* Estilos para la paginación dentro del componente */}
+      <div className={styles.paginationContainer}>
+        {/* ... tus elementos de paginación aquí ... */}
+      </div>
     </div>
   );
-  
-  
-  
 };
 
 export default SearchBar;
