@@ -1,38 +1,57 @@
 .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 16px;
-  }
-  
-  .featuredDocumentaryCard {
-    position: relative;
-    display: flex; 
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 80%; 
-    height: 300px; 
-    margin: 0 auto; 
-    overflow: hidden; 
-  }
-  
-  .documentaryImage {
-    width: 40%; 
-    height: 100%; 
-    border-radius: 8px 0 0 8px; 
-    object-fit: cover; 
-  }
-  
-  .overlay {
-    flex-grow: 1; 
-    padding: 16px; 
-    color: #fff;
-    text-align: left;
-  }
-  
-  .documentaryDetails {
-    text-align: left;
-  }
-  
-  
-  
+  font-size: var(--heading-5);
+  color: var(--primary-900);
+  text-align: center;
+  font-weight: normal;
+}
+
+.newDocumentaryList {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.newDocumentary {
+  width: 49.2%;
+  aspect-ratio: 1/1;
+  background-color: gray;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: -6px 2px 5px -7px rgba(0,0,0,0.75);
+}
+
+.newDocumentary::before {
+  content: "Nuevo";
+  padding: 2px 15px 2px 25px;
+  position: absolute;
+  left: 0;
+  font-size: var(--subtitle-2);
+  top: 5%;
+  background-color: var(--neutral-50);
+  color: var(--primary-900);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.infoSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.cardTitle {
+  margin-bottom: 40px;
+  font-size: var(--subtitle-2);
+  color: var(--neutral-10);
+}
+
+.newDocumentarySection {
+  background-color: var(--neutral-50);
+}
+
+

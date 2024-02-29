@@ -14,7 +14,7 @@ import styles from './page.module.css';
 import data from '@/data/data';
 import IndieDocumentary from '../components/IndieDocumentary/IndieDocumentary';
 
-const NewDocumentaryList = [{titulo:"Documental 1"}, {titulo:"Documental 2"}]
+const NewDocumentaryList = [{titulo:"Ovnis: Proyectos de alto secreto desclasificados", fecha:"2021"}, {titulo:"Citizenfour: Las revelaciones de Edward Snowden", fecha:"2025"}]
 
 
 const ITEMS_PER_PAGE = 6;
@@ -162,8 +162,8 @@ const Home = () => {
         currentPage={currentPage}
         paginate={paginate}
       />
-<TopDocumentary/>
-      <NewDocumentary documentaryList={NewDocumentaryList} />
+{/* <TopDocumentary/> */}
+      <NewDocumentary list={NewDocumentaryList} />
       <IndieDocumentary/>
     </div>
   );

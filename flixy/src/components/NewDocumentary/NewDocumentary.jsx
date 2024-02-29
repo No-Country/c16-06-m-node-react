@@ -1,35 +1,41 @@
 import React from "react";
-import data from "@/data/data";
-import styles from "./NewDocumentary.module.css";
+// import data from "@/data/data";
+import {newDocumentaryList, newDocumentary, title, infoSection, cardTitle, newDocumentarySection} from "./NewDocumentary.module.css";
+import Button from "../Button/Button";
 
-const NewDocumentary = () => {
-  const indieDocumentaries = data.filter((documentary) =>
-    documentary.category.includes("Indie")
-  );
-
-  const featuredDocumentary = indieDocumentaries[0];
+const NewDocumentary = ({list}) => {
 
   return (
-    <div>
-      <h2 className={styles.title}>Documentales Independientes</h2>
-      <p>
-        Las más interesantes propuestas que muy probablemente cambiarán tu forma
-        de ver el mundo.
-      </p>
-      <div className={styles.featuredDocumentaryCard}>
-        <img
-          src={featuredDocumentary.image}
-          alt={featuredDocumentary.nameOriginal}
-          className={styles.documentaryImage}
-        />
-        <div className={styles.overlay}>
-          <h3>{featuredDocumentary.nameOriginal}</h3>
-          <p>
-            {featuredDocumentary.year}|{featuredDocumentary.score}
-          </p>
-        </div>
-      </div>
-    </div>
+    <>
+      <section className={newDocumentarySection}>
+          <h4 className={title}>Populares de Flixy</h4>
+          <div className={newDocumentaryList}>
+            {
+              list.map(({titulo, fecha}) => {
+                return <>
+                <div className={newDocumentary} key={titulo}>
+                  <span className={cardTitle}>
+                    {
+                      titulo
+                    }
+                  </span>
+
+                  <div className={infoSection}>
+                    <div>
+                      {
+                        fecha
+                      }
+                    </div>
+
+                    <Button className="btn3">Ver ahora</Button>
+                  </div>
+                </div>
+                </>
+              })
+            }
+          </div>
+      </section>
+    </>
   );
 };
 
