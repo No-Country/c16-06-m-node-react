@@ -9,18 +9,19 @@ const IndieDocumentary = () => {
     documentary.category.includes("Indie")
   );
 
-  const featuredDocumentary = indieDocumentaries[0];
+  const {nameSpanish, year, image2} = indieDocumentaries[0];
+  // console.log(featuredDocumentary)
 
   return (
     <>
       <section className={indieDocumentarySection}>
         <h4 className={title}>Documentales independientes</h4>
         <p className={text}>Las mas interesantes propuestas que muy probablemente cambiaran tu forma de ver el mundo.</p>
-        <div className={cardDocumentary} style={{backgroundImage:"url(https://i.ytimg.com/vi/OYfnkLurLA8/maxresdefault.jpg)"}}>
+        <div className={cardDocumentary} style={{backgroundImage:"url("+ image2 +")"}}>
           <span className={cardSign}>Inglés</span>
 
           <span className={cardTitle}>
-            Zeitgeist: El estado del paradigma monetario socioeconomico mundial.
+            {nameSpanish}
           </span>
 
           <div className={infoSection}>
@@ -29,7 +30,7 @@ const IndieDocumentary = () => {
 
               <div className={slash}/>
 
-              <span style={{alignSelf:"center", color:"var(--neutral50)", fontSize:"var(--body-1)"}}>2021</span>
+              <span style={{alignSelf:"center", color:"var(--neutral50)", fontSize:"var(--body-1)"}}>{year}</span>
             </div>
 
             <Button className="btn3">Ver ahora</Button>

@@ -15,7 +15,9 @@
 .newDocumentary {
   width: 49.2%;
   aspect-ratio: 1/1;
-  background-color: gray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
   padding: 20px;
   position: relative;
