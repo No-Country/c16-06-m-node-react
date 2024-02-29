@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {UserCircle} from "@phosphor-icons/react/dist/ssr";
+import { UserCircle } from "@phosphor-icons/react/dist/ssr";
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -8,36 +8,40 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.logo}>
         <Link href="/">
-          <span>
+          {/* Envuelve la imagen con Link */}
+          
             <Image src="/logoFlixi/flixy logo.svg" alt="Logo" width={50} height={50} />
-          </span>
+          
         </Link>
       </div>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
           <Link href="/">
-            <span>Home</span>
+            
+              <span>Home</span>
+            
           </Link>
         </li>
         <li className={styles.navItem}>
           <Link href="/lo-nuevo">
-            <span>Lo Nuevo</span>
+            
+              <span>Lo Nuevo</span>
+            
           </Link>
         </li>
         <li className={styles.navItem}>
           <Link href="/lo-popular">
-            <span>Lo Popular</span>
+            
+              <span>Lo Popular</span>
+            
           </Link>
         </li>
       </ul>
      
       <Link href="/login" >
-      <UserCircle size={32} />  
+        <UserCircle size={32} />  
         <span className={styles.loginLink}>Login</span>
       </Link>
-      
-        
-        
     </nav>
   );
 };
