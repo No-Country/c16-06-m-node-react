@@ -1,6 +1,6 @@
 import React from "react";
 // import data from "@/data/data";
-import {newDocumentaryList, newDocumentary, title, infoSection, cardTitle, newDocumentarySection, info} from "./NewDocumentary.module.css";
+import {newDocumentaryList, newDocumentary, title, infoSection, cardTitle, newDocumentarySection, info, cardSign, slash} from "./NewDocumentary.module.css";
 import Button from "../Button/Button";
 import Rating from "../Rating/Rating";
 
@@ -15,6 +15,8 @@ const NewDocumentary = ({list}) => {
               list.map(({titulo, fecha}) => {
                 return <>
                 <div className={newDocumentary} key={titulo}>
+                  <span className={cardSign}>Nuevo</span>
+
                   <span className={cardTitle}>
                     {
                       titulo
@@ -25,7 +27,9 @@ const NewDocumentary = ({list}) => {
                     <div className={info}>
                       <Rating/>
 
-                      <span style={{alignSelf:"center"}}>{fecha}</span>
+                      <div className={slash}/>
+
+                      <span style={{alignSelf:"center", color:"var(--neutral50)", fontSize:"var(--body-1)"}}>{fecha}</span>
                     </div>
 
                     <Button className="btn3">Ver ahora</Button>

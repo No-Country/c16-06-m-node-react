@@ -24,7 +24,7 @@
     aspect-ratio: 19/9;
     width: 100%;
     padding: 20px;
-    background-image: url("https://i.ytimg.com/vi/OYfnkLurLA8/maxresdefault.jpg");
+    /* background-image: url("https://i.ytimg.com/vi/OYfnkLurLA8/maxresdefault.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -36,8 +36,7 @@
     box-shadow: -6px 2px 5px -7px rgba(0,0,0,0.75);
 }
 
-.cardDocumentary::before {
-    content: "Inglés";
+.cardSign {
     padding: 2px 15px 2px 25px;
     position: absolute;
     left: 0;
@@ -68,4 +67,11 @@
     justify-content: center;
     align-content: center;
     gap: 20px;
+}
+
+.slash {
+    width: 2px;
+    height: 80%;
+    background-color: var(--primary-10);
+    margin: auto 0;
 }

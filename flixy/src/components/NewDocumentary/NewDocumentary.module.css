@@ -25,7 +25,7 @@
   box-shadow: -6px 2px 5px -7px rgba(0,0,0,0.75);
 }
 
-.newDocumentary::before {
+.cardSign {
   content: "Nuevo";
   padding: 2px 15px 2px 25px;
   position: absolute;
@@ -60,4 +60,11 @@
   justify-content: center;
   align-content: center;
   gap: 20px;
+}
+
+.slash {
+  width: 2px;
+  height: 80%;
+  background-color: var(--primary-10);
+  margin: auto 0;
 }
