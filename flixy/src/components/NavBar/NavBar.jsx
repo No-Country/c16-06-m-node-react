@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className={styles.logo}>
         <Link href="/">
           <span>
-            <Image src="/logoFlixi/Flixi.svg" alt="Logo" width={50} height={50} />
+            <Image src="/logoFlixi/flixy logo.svg" alt="Logo" width={50} height={50} />
           </span>
         </Link>
       </div>

@@ -53,8 +53,8 @@
   
   .carouselTextOverlay p {
     font-size: 14px;
-    margin: 0; /* Elimina el margen predeterminado */
-    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 0; 
+    text-align: left; 
   }
   
   
