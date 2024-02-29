@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
-import Footer from '../components/footer/footer';
+import Footer from '../components/Footer/Footer';
 import './globals.css';
 import styles from '../components/Footer/Footer.module.css'
 
