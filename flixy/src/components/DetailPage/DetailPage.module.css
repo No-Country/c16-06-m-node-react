@@ -1,0 +1,42 @@
+/* detailPage.module.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .poster {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .properties {
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .info {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .videoContainer {
+    /* Ajusta el espacio entre la sección de propiedades y el video según sea necesario */
+  }
+      
