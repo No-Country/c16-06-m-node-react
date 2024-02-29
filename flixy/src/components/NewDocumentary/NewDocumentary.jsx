@@ -1,7 +1,8 @@
 import React from "react";
 // import data from "@/data/data";
-import {newDocumentaryList, newDocumentary, title, infoSection, cardTitle, newDocumentarySection} from "./NewDocumentary.module.css";
+import {newDocumentaryList, newDocumentary, title, infoSection, cardTitle, newDocumentarySection, info} from "./NewDocumentary.module.css";
 import Button from "../Button/Button";
+import Rating from "../Rating/Rating";
 
 const NewDocumentary = ({list}) => {
 
@@ -21,10 +22,10 @@ const NewDocumentary = ({list}) => {
                   </span>
 
                   <div className={infoSection}>
-                    <div>
-                      {
-                        fecha
-                      }
+                    <div className={info}>
+                      <Rating/>
+
+                      <span style={{alignSelf:"center"}}>{fecha}</span>
                     </div>
 
                     <Button className="btn3">Ver ahora</Button>

@@ -1,7 +1,8 @@
 import React from "react";
 import data from "@/data/data";
-import {title, indieDocumentarySection, text, cardDocumentary, infoSection, cardTitle} from "./IndieDocumentary.module.css";
+import {title, indieDocumentarySection, text, cardDocumentary, infoSection, cardTitle, info} from "./IndieDocumentary.module.css";
 import Button from "../Button/Button";
+import Rating from "../Rating/Rating";
 
 const IndieDocumentary = () => {
   const indieDocumentaries = data.filter((documentary) =>
@@ -21,8 +22,10 @@ const IndieDocumentary = () => {
           </span>
 
           <div className={infoSection}>
-            <div>
-              2021
+            <div className={info}>
+              <Rating/>
+
+              <span style={{alignSelf:"center"}}>2021</span>
             </div>
 
             <Button className="btn3">Ver ahora</Button>

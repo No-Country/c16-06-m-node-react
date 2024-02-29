@@ -54,4 +54,10 @@
   background-color: var(--neutral-50);
 }
 
-
+.info {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
