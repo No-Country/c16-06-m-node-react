@@ -1,26 +1,38 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  max-width: var(--max-width);
+  width: var(--section-width);
+  margin: 0 auto;
+}
+
+.logo {
+  cursor: pointer; 
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 70px;
+}
+
+.navItem {
+  /* margin-right: 1rem; */
+}
+
+.loginLink {
   
-  .logo {
-    cursor: pointer; 
-  }
-  
-  .navList {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navItem {
-    margin-right: 1rem;
-  }
-  
-  .loginLink {
-   
-  }
+}
+
+.buttonZone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 20px;
+}
   

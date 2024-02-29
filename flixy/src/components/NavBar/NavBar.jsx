@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import {UserCircle} from "@phosphor-icons/react/dist/ssr";
+// import Image from 'next/image';
+// import {UserCircle} from "@phosphor-icons/react/dist/ssr";
 import styles from './Navbar.module.css';
+import Button from '../Button/Button';
 
 const Navbar = () => {
   return (
@@ -9,7 +10,8 @@ const Navbar = () => {
       <div className={styles.logo}>
         <Link href="/">
           <span>
-            <Image src="/logoFlixi/flixy logo.svg" alt="Logo" width={50} height={50} />
+            {/* <Image src="/logoFlixi/flixy logo.svg" alt="Logo" width={50} height={50} /> */}
+            <i className='navbarLogo'></i>
           </span>
         </Link>
       </div>
@@ -31,10 +33,15 @@ const Navbar = () => {
         </li>
       </ul>
      
-      <Link href="/login" >
+      {/* <Link href="/login" >
       <UserCircle size={32} />  
         <span className={styles.loginLink}>Login</span>
-      </Link>
+      </Link> */}
+
+      <div className={styles.buttonZone}>
+        <Button className="btn2">Registarse</Button>
+        <Button className="btn1">Iniciar sesión</Button>
+      </div>
       
         
         
