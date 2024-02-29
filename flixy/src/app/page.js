@@ -146,34 +146,34 @@ const Home = () => {
         </div>
       </section>
 
-      
-      <div>
-      <StreamingFilter
-  selectedValue={platformFilter}
-  onChange={(value) => {
-    console.log('Selected Platform:', value);
-    setPlatformFilter(value);
-  }}
-  onClear={() => setPlatformFilter('all')} 
-/>
-      </div>
-      
-      <h3>Lista de Documentales</h3>
-      <div className={styles.documentaryList}>
-        {currentFilteredData.length > 0 ? (
-          currentFilteredData.map((documentary) => (
-            <DocumentaryCard key={documentary.id} documentary={documentary} />
-          ))
-        ) : (
-          <p>No se encontraron documentales que cumplan con los filtros seleccionados.</p>
-        )}
-      </div>
-      <Pagination
-        itemsPerPage={ITEMS_PER_PAGE}
-        totalItems={totalFilteredItems}
-        currentPage={currentPage}
-        paginate={paginate}
-      />
+      <section>
+              <h3>Lista de Documentales</h3>
+              <div className={styles.documentaryList}>
+                {currentFilteredData.length > 0 ? (
+                  currentFilteredData.map((documentary) => (
+                    <DocumentaryCard key={documentary.id} documentary={documentary} />
+                    ))
+                    ) : (
+                      <p>No se encontraron documentales que cumplan con los filtros seleccionados.</p>
+                      )}
+              </div>
+              <Pagination
+                itemsPerPage={ITEMS_PER_PAGE}
+                totalItems={totalFilteredItems}
+                currentPage={currentPage}
+                paginate={paginate}
+              />
+                  <div>
+                  <StreamingFilter
+              selectedValue={platformFilter}
+              onChange={(value) => {
+                console.log('Selected Platform:', value);
+                setPlatformFilter(value);
+              }}
+              onClear={() => setPlatformFilter('all')} 
+            />
+                  </div>    
+      </section>
 {/* <TopDocumentary/> */}
       <NewDocumentary list={NewDocumentaryList} />
       <IndieDocumentary/>
