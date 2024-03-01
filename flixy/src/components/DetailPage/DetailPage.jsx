@@ -3,6 +3,7 @@ import React from 'react';
 import { useParams } from 'next/navigation';
 import ReactPlayer from 'react-player';
 import Trailer from '../Trailer/Trailer';
+import Recommendations from '../Recommendations/Recommendations';
 import data from '@/data/data';
 import styles from './detailPage.module.css';
 
@@ -19,6 +20,14 @@ const DocumentaryDetailPage = () => {
   if (!selectedDocumentary) {
     return <p>Error: Documental no encontrado.</p>;
   }
+
+   
+   const currentCategory = selectedDocumentary.category[0];
+
+   
+   const recommendedDocumentaries = data
+     .filter(doc => doc.id !== documentaryId && doc.category.includes(currentCategory))
+     .slice(0, 3); 
 
   return (
     <div className={styles.container}>
@@ -43,6 +52,7 @@ const DocumentaryDetailPage = () => {
         {/* Nuevo componente para mostrar el trailer */}
         <Trailer trailerUrl={selectedDocumentary.trailer} />
       </div>
+      <Recommendations recommendedDocumentaries={recommendedDocumentaries} />
     </div>
   );
 };
