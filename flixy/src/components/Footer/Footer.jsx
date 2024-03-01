@@ -1,65 +1,86 @@
-import React from "react";
-import Link from "next/link";
-import styles from "./Footer.module.css";
+import React from 'react';
+import {footer, footerContent, sectionTitle, phrase, exploreList, titleItem, item, rightSide, leftSide, socialMedia, socialLinks, policy, copyright, patron, patronEl} from './Footer.module.css';
 import {
-  FacebookLogo,
-  InstagramLogo,
-  TwitterLogo,
-  } from "@phosphor-icons/react/dist/ssr";
+    FacebookLogo,
+    InstagramLogo,
+    TwitterLogo,
+    } from "@phosphor-icons/react/dist/ssr";
+import Link from 'next/link'
 
-const Footer = () => {
+const Footer = ({  }) => {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footerColumns}>
-        <div className={styles.footerColumn}>
-          <h3>Enlaces Rápidos</h3>
-          <ul>
-            <li>
-              <Link href="/">Inicio</Link>
-            </li>
-            <li>
-              <Link href="/categorias">Categorías</Link>
-            </li>
-            <li>
-              <Link href="/acerca-de">Acerca de nosotros</Link>
-            </li>
-          </ul>
+    <>
+      <footer className={footer}>
+        <div className={patron}>
+            <div className={patronEl}></div>
+            <div className={patronEl}></div>
+            <div className={patronEl}></div>
+            <div className={patronEl}></div>
+            <div className={patronEl}></div>
+            <div className={patronEl}></div>
+            <div className={patronEl}></div>
+            <div className={patronEl}></div>
+            <div className={patronEl}></div>
+            <div className={patronEl}></div>
         </div>
 
-        <div className={styles.footerColumn}>
-          <h3>Contacto</h3>
-          <p>info@flixi.com</p>
+        <div className={footerContent}>
+            <div className={leftSide}>
+                <div>
+                    <span className={sectionTitle}>
+                        ¡Mantente informado!
+                    </span>
+                    <p className={phrase}>
+                        Nuevos documentales cada semana.
+                    </p>
+                </div>
+
+                <ul className={exploreList}>
+                    <li className={titleItem}>Explora:</li>
+                    {/* <div> */}
+                    <li className={item}>
+                        <Link href="">Inicio</Link>
+                    </li>
+
+                    <li className={item}>
+                        <Link href="">Lo nuevo</Link>
+                    </li>
+
+                    <li className={item}>
+                        <Link href="">Popular</Link>
+                    </li>
+                    {/* </div> */}
+                </ul>
+            </div>
+
+            <div className={rightSide}>
+                <div className={socialMedia}>
+                    <i className="logo"></i>
+                    <div className={socialLinks}>
+                        <Link href="">
+                            <FacebookLogo size={28}/>
+                        </Link>
+                        <Link href="">
+                            <InstagramLogo size={28}/>
+                        </Link>
+                        <Link href="">
+                            <TwitterLogo size={28}/>
+                        </Link>
+                    </div>
+                </div>
+
+                <Link href="" className={policy}>
+                    Políticas de privacidad
+                </Link>
+
+                <p className={copyright}>
+                    NoCountry C16-06. Todos los derechos reservados.
+                </p>
+            </div>
         </div>
 
-        <div className={styles.footerColumn}>
-          <h3>Redes Sociales</h3>
-          <ul>
-            <li>
-              <Link href="https://www.facebook.com/">
-                <FacebookLogo size={20} />
-                Facebook
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.instagram.com/">
-                <InstagramLogo size={20} />
-                Instagram
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.twitter.com/">
-                <TwitterLogo size={20} />
-                Twitter
-              </Link>
-            </li>
-           </ul>
-        </div>
-      </div>
-
-      <p className={styles.footerText}>
-        &copy; 2024 FLIXI. Todos los derechos reservados.
-      </p>
-    </footer>
+      </footer>
+    </>
   );
 };
 

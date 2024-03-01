@@ -2,31 +2,40 @@
   width: 100%;
   display: flex;
   justify-content: center;
+
+  margin: 60px 0;
 }
 
 .searchForm {
   width: 100%;
   max-width: 1000px; 
   display: flex;
+  position: relative;
 }
 
 .searchInput {
   flex: 1;
   padding: 12px; 
-  border: 1px solid #ffc107;
-  border-radius: 4px 0 0 4px;
-  height: 40px; 
+  /* border: 1px solid #ffc107; */
+  border: none;
+  background-color: var(--neutral-50);
+  border-radius: 20px;
+  height: 50px; 
+  color: var(--primary-900);
 }
 
 .searchButton {
-  padding: 12px; 
+  padding: 5px; 
   border: 1px solid #ccc;
-  border-radius: 0 4px 4px 0;
-  background-color: #ffc107;
+  border-radius: 50%;
+  background-color: var(--primary-800);
   cursor: pointer;
   height: 40px; 
   display: flex;
   align-items: center; 
+  position: absolute;
+  right: 5px;
+  top: 10%;
 }
 .inputContainer {
   position: relative;

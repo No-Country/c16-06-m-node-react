@@ -1,8 +1,9 @@
 /* Carousel.module.css */
 
 .carouselContainer {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    margin-top: 20px;
   }
   
   .carouselWrapper {
@@ -17,7 +18,8 @@
   
   .carouselSlide {
     position: relative;
-    height: 300px;
+    aspect-ratio: 21/9;
+    margin-top: 30px;
   }
   
   .carouselSlide img {
@@ -43,19 +45,25 @@
     text-align: left;
     color: #fff; /* Color del texto, ajusta según el fondo de tu imagen */
     background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
-    padding: 20px;
+    padding: 80px;
   }
   
   .carouselTextOverlay h3 {
     font-size: 20px;
     margin-bottom: 10px;
+    font-size: var(--subtitle-1);
+    color: var(--neutral-10);
+    max-width: 700px;
   }
   
   .carouselTextOverlay p {
     font-size: 14px;
     margin: 0; 
+    margin-bottom: 20px;
     text-align: left; 
+    font-size: var(--body-2);
+    color: var(--neutral-100);
+    max-width: 700px;
   }
-  
   
   

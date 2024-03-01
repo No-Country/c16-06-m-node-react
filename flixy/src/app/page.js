@@ -13,8 +13,9 @@ import Carousel from '@/components/Carousel/Carousel';
 import {Funnel} from "@phosphor-icons/react/dist/ssr"
 import styles from './page.module.css';
 import data from '@/data/data';
+import IndieDocumentary from '../components/IndieDocumentary/IndieDocumentary';
 
-const NewDocumentaryList = [{titulo:"Documental 1"}, {titulo:"Documental 2"}]
+const NewDocumentaryList = [{titulo:"Ovnis: Proyectos de alto secreto desclasificados", fecha:"2021"}, {titulo:"Citizenfour: Las revelaciones de Edward Snowden", fecha:"2025"}]
 
 
 const ITEMS_PER_PAGE = 6;
@@ -104,6 +105,80 @@ const Home = () => {
   };
 
   return (
+    <div className={styles.mainDiv}>
+      {/* <Navbar /> */}
+      <section className={styles.sectionCover}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Mundo Documental</h1>
+          <p className={styles.heroText}>En un solo lugar</p>
+          <Carousel/>
+        </div>
+      </section>
+
+      <section className={styles.sectionCover}>
+        <div className={styles.searchSection}>
+          <span className={styles.searchTitle}>Descubre documentales</span>
+          <p className={styles.searchDescription}>Desde las mejores plataformas de streaming del momento</p>
+          <SearchBar onSearch={handleSearch} onClearSearch={handleClearSearch} />
+        </div>
+
+        <div className={styles.filterSection}>
+          <div className={styles.filters} style={{ display: 'flex', gap: '70px' }}>
+            <h3><Funnel size={32} /></h3>
+            <Filter
+              label="Año"
+              options={['1950-1959', '1960-1969', '1970-1779', '1980-1989', '1990-1999', '2000-2009', '2010-2019', '2020-2024']}
+              selectedValue={selectedFilters.year}
+              onChange={(value) => handleFilterChange('year', value)}
+            />
+            <Filter
+              label="Calificación"
+              options={['7.0 - 7.4', '7.5 - 7.9', '8.0 - 8.4', '8.5 - 8.9', '9.0 - 9.4', '9.5 - 10']}
+              selectedValue={selectedFilters.score}
+              onChange={(value) => handleFilterChange('score', value)}
+            />
+            <Filter
+              label="Categorias"
+              options={['Comedy', 'Drama', 'Biography', 'Crime', 'Adventure', 'Sport', 'Documentary', 'Indie', 'History', 'Warlike', 'Music', 'Short Film', 'News', 'Family', 'Suspense']}
+              selectedValue={selectedFilters.category}
+              onChange={(value) => handleFilterChange('category', value)}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+              <h3>Lista de Documentales</h3>
+              <div className={styles.documentaryList}>
+                {currentFilteredData.length > 0 ? (
+                  currentFilteredData.map((documentary) => (
+                    <DocumentaryCard key={documentary.id} documentary={documentary} />
+                    ))
+                    ) : (
+                      <p>No se encontraron documentales que cumplan con los filtros seleccionados.</p>
+                      )}
+              </div>
+              <Pagination
+                itemsPerPage={ITEMS_PER_PAGE}
+                totalItems={totalFilteredItems}
+                currentPage={currentPage}
+                paginate={paginate}
+              />
+                  <div>
+                  <StreamingFilter
+              selectedValue={platformFilter}
+              onChange={(value) => {
+                console.log('Selected Platform:', value);
+                setPlatformFilter(value);
+              }}
+              onClear={() => setPlatformFilter('all')} 
+            />
+                  </div>    
+      </section>
+{/* <TopDocumentary/> */}
+      <NewDocumentary list={NewDocumentaryList} />
+      <IndieDocumentary/>
+
     <div>
     <Carousel />
     <h1>Mundo Documental</h1>
@@ -121,6 +196,7 @@ const Home = () => {
         }}
         onClear={() => setPlatformFilter('all')}
       />
+
     </div>
     <div>
       <div className={styles.filters} style={{ display: 'flex', gap: '10px' }}>

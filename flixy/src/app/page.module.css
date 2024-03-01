@@ -203,11 +203,67 @@
   }
 }
 
+.mainDiv {
+  background-color: var(--neutral-50);
+}
+
 .documentaryList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; 
 }
+
+.sectionCover {
+  max-width: unset;
+  margin-top: unset;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--neutral-700);
+}
+
+.heroContent {
+  width:var(--section-width); 
+  max-width:var(--max-width); 
+  margin:0 auto; 
+  padding:40px 0;
+}
+
+.heroTitle {
+  color:var(--primary-100); 
+  font-size:var(--heading-4);
+  margin-top: 40px;
+}
+
+.heroText {
+  color:var(--neutral-200); 
+  font-size:var(--subtitle-1);
+}
+
+.searchSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchTitle {
+  font-size: var(--heading-5);
+  color: var(--primary-300);
+  margin-top: 40px;
+}
+
+.searchDescription {
+  color: var(--neutral-200);
+  font-size: var(--body-1);
+  margin-top: 10px;
+}
+
+.filterSection {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 70px;
+  padding-bottom: 30px;
+}
+
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {

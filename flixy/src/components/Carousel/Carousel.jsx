@@ -5,6 +5,7 @@ import styles from './Carousel.module.css';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Button from '../Button/Button';
 
 const Carousel = () => {
   const selectedDocumentaries = data.filter(
@@ -31,6 +32,7 @@ const Carousel = () => {
             <div className={styles.carouselTextOverlay}>
               <h3>{documentary.nameOriginal}</h3>
               <p>{documentary.description}</p>
+              <Button className="btn3">Ver ahora</Button>
             </div>
           </div>
         ))}
