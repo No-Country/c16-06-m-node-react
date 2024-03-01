@@ -9,7 +9,7 @@ import Button from '../Button/Button';
 
 const Carousel = () => {
   const selectedDocumentaries = data.filter(
-    (documentary) => [25, 52, 37, 45, 33, 15].includes(documentary.id)
+    (documentary) => [52, 31, 43, 39, 34, 29, 25, 8, 6, 1].includes(documentary.id)
   );
 
   const carouselSettings = {

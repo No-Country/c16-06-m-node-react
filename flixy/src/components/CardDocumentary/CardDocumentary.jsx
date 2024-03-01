@@ -5,7 +5,7 @@ import styles from './CardDocumentary.module.css';
 const DocumentaryCard = ({ documentary }) => {
   return (
     <div className={styles.documentaryCard}>
-      <Link href="/documentary/[documentaryId]" as={`/documentary/${documentary.id}`}>
+      <Link href="/[id]" as={`/${documentary.id}`}>
         
           <img src={documentary.image} alt={documentary.nameSpanish || documentary.nameOriginal} className={styles.documentaryImage} />
           <div className={styles.documentaryDetails}>
