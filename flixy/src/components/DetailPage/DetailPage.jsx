@@ -7,6 +7,7 @@ import Recommendations from '../Recommendations/Recommendations';
 import data from '@/data/data';
 import styles from './detailPage.module.css';
 
+
 const DocumentaryDetailPage = () => {
   const { id } = useParams();
 
@@ -24,10 +25,15 @@ const DocumentaryDetailPage = () => {
    
    const currentCategory = selectedDocumentary.category[0];
 
+   const hasCommonCategory = (categories1, categories2) => {
+    return categories1.some(category => categories2.includes(category));
+  };
+
    
-   const recommendedDocumentaries = data
-     .filter(doc => doc.id !== documentaryId && doc.category.includes(currentCategory))
-     .slice(0, 3); 
+  const recommendedDocumentaries = data
+    .filter(doc => doc.id !== documentaryId && hasCommonCategory(doc.category, currentCategory))
+    .slice(0, 10);
+
 
   return (
     <div className={styles.container}>
@@ -52,7 +58,20 @@ const DocumentaryDetailPage = () => {
         {/* Nuevo componente para mostrar el trailer */}
         <Trailer trailerUrl={selectedDocumentary.trailer} />
       </div>
-      <Recommendations recommendedDocumentaries={recommendedDocumentaries} />
+      {/* Recomendaciones con scroll horizontal */}
+      <h3>Recomendados para ti</h3>
+      <p>Te sugerimos esta seleccion segun tus visualizaciones</p>
+      <div className={styles.recommendedList}>
+        {recommendedDocumentaries.map((doc) => (
+          <div key={doc.id} className={styles.recommendedItem}>
+            <img
+              src={doc.image2}
+              alt={`${doc.nameSpanish || doc.nameOriginal} Poster`}
+              className={styles.recommendedImage}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
