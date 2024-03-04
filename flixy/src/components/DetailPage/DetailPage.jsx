@@ -1,15 +1,19 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'next/navigation';
 import ReactPlayer from 'react-player';
 import Trailer from '../Trailer/Trailer';
 import Recommendations from '../Recommendations/Recommendations';
+import StarRatings from 'react-star-ratings'; // Importa la biblioteca
+
 import data from '@/data/data';
 import styles from './detailPage.module.css';
 
-
 const DocumentaryDetailPage = () => {
   const { id } = useParams();
+  const [userRating, setUserRating] = useState(0);
+const [showReviews, setShowReviews] = useState(false);
+
 
   if (!id) {
     return <p>Error: Documentary ID no encontrado.</p>;
@@ -22,18 +26,15 @@ const DocumentaryDetailPage = () => {
     return <p>Error: Documental no encontrado.</p>;
   }
 
-   
-   const currentCategory = selectedDocumentary.category[0];
+  const currentCategory = selectedDocumentary.category[0];
 
-   const hasCommonCategory = (categories1, categories2) => {
+  const hasCommonCategory = (categories1, categories2) => {
     return categories1.some(category => categories2.includes(category));
   };
 
-   
   const recommendedDocumentaries = data
     .filter(doc => doc.id !== documentaryId && hasCommonCategory(doc.category, currentCategory))
     .slice(0, 10);
-
 
   return (
     <div className={styles.container}>
@@ -60,7 +61,7 @@ const DocumentaryDetailPage = () => {
       </div>
       {/* Recomendaciones con scroll horizontal */}
       <h3>Recomendados para ti</h3>
-      <p>Te sugerimos esta seleccion segun tus visualizaciones</p>
+      <p>Te sugerimos esta selección según tus visualizaciones</p>
       <div className={styles.recommendedList}>
         {recommendedDocumentaries.map((doc) => (
           <div key={doc.id} className={styles.recommendedItem}>
@@ -69,9 +70,24 @@ const DocumentaryDetailPage = () => {
               alt={`${doc.nameSpanish || doc.nameOriginal} Poster`}
               className={styles.recommendedImage}
             />
+            <button onClick={() => handleShowReviews(doc.id)}>Ver Reseñas</button>
           </div>
         ))}
       </div>
+
+     {/* Mostrar reseñas del documental seleccionado */}
+     {selectedDocumentary.reviews && (
+        <div className={`${styles.reviewsContainer} ${showReviews && styles.show}`}>
+          <h3>Reseñas de {selectedDocumentary.nameOriginal}</h3>
+          {selectedDocumentary.reviews.map((review, index) => (
+            <div key={index} className={styles.reviewItem}>
+              <p>{review.user}</p>
+              <p>{review.comment}</p>
+              <p>Rating: {review.rating}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
