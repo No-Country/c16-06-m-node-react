@@ -7,7 +7,6 @@ import data from "@/data/data";
 
 const NewDocumentary = ({list}) => {
   const NewDocumentaries = [data[data.length - 1], data[data.length - 2]]
-  console.log(NewDocumentaries)
 
   return (
     <>
@@ -15,7 +14,7 @@ const NewDocumentary = ({list}) => {
           <h4 className={title}>Populares de Flixy</h4>
           <div className={newDocumentaryList}>
             {
-              NewDocumentaries.map(({nameSpanish, year, image}) => {
+              NewDocumentaries.map(({nameSpanish, year, image, score}) => {
                 return <>
                 <div className={newDocumentary} key={nameSpanish} style={{backgroundImage:"url("+image+")"}}>
                   <span className={cardSign}>Nuevo</span>
@@ -28,7 +27,7 @@ const NewDocumentary = ({list}) => {
 
                   <div className={infoSection}>
                     <div className={info}>
-                      <Rating/>
+                      <Rating score={score}/>
 
                       <div className={slash}/>
 

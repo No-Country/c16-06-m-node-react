@@ -9,8 +9,7 @@ const IndieDocumentary = () => {
     documentary.category.includes("Indie")
   );
 
-  const {nameSpanish, year, image2} = indieDocumentaries[0];
-  // console.log(featuredDocumentary)
+  const {nameSpanish, year, image2, score} = indieDocumentaries[0];
 
   return (
     <>
@@ -26,7 +25,7 @@ const IndieDocumentary = () => {
 
           <div className={infoSection}>
             <div className={info}>
-              <Rating/>
+              <Rating score={score}/>
 
               <div className={slash}/>
 

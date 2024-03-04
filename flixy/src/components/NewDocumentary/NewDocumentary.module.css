@@ -25,14 +25,17 @@
   flex-direction: column;
   justify-content: flex-end;
   box-shadow: -6px 2px 5px -7px rgba(0,0,0,0.75);
+  background-color: #0005; 
+  background-blend-mode: darken;
 }
 
 .cardSign {
   content: "Nuevo";
-  padding: 2px 15px 2px 25px;
+  padding: 5px 15px 5px 25px;
   position: absolute;
   left: 0;
-  font-size: var(--subtitle-2);
+  font-size: var(--body-1);
+  font-weight: bold;
   top: 5%;
   background-color: var(--neutral-50);
   color: var(--primary-900);
