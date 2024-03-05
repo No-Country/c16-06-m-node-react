@@ -175,11 +175,15 @@ const Home = () => {
             />
                   </div>    
       </section>
-{/* <TopDocumentary/> */}
+      {/* <TopDocumentary/> */}
       <NewDocumentary list={NewDocumentaryList} />
       <IndieDocumentary/>
 
+
+  </div>
+
     </div>
+
   );
 };
 
