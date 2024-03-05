@@ -18,7 +18,7 @@ import IndieDocumentary from '../components/IndieDocumentary/IndieDocumentary';
 const NewDocumentaryList = [{titulo:"Ovnis: Proyectos de alto secreto desclasificados", fecha:"2021"}, {titulo:"Citizenfour: Las revelaciones de Edward Snowden", fecha:"2025"}]
 
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 5;
 
 const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -179,8 +179,13 @@ const Home = () => {
       <NewDocumentary list={NewDocumentaryList} />
       <IndieDocumentary/>
 
+
   </div>
+
+    </div>
+
   );
 };
 
-export default Home;
+
+export default Home

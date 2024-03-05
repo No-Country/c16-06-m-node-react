@@ -39,4 +39,73 @@
   .videoContainer {
     /* Ajusta el espacio entre la sección de propiedades y el video según sea necesario */
   }
-      
+  .recommendedList {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px; /* Ajusta el espacio entre las imágenes */
+    padding: 10px; /* Ajusta el espacio interno del contenedor */
+  
+    /* Estilos de la barra de desplazamiento */
+    scrollbar-width: thin;
+    scrollbar-color: darkgray lightgray;
+  }
+  
+  .recommendedItem {
+    flex: 0 0 auto;
+    width: 200px; /* Ajusta el ancho de cada elemento según tus necesidades */
+  }
+  
+  .recommendedImage {
+    width: 100%;
+    height: 100%; /* Cambiado a 100% para asegurar un tamaño consistente */
+    object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro del contenedor */
+    border-radius: 8px; /* Ajusta la esquina redondeada según tus necesidades */
+  }
+  
+  /* Estilos específicos para Webkit (Chrome, Safari) */
+  .recommendedList::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .recommendedList::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+  }
+  
+  .recommendedList::-webkit-scrollbar-track {
+    background-color: lightgray;
+  }
+
+  /* ... Estilos anteriores */
+
+  .reviewsContainer {
+    margin-top: 20px;
+    border: 2px solid #fff; /* Cambiado a un borde sólido de 2px de ancho */
+    border-radius: 10px; /* Añadido un borde redondeado para un aspecto más suave */
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añadida una suave sombra para resaltar el contenedor */
+    color: #333
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .reviewItem {
+    border-bottom: 1px solid #33FFD7;
+    padding: 10px 0;
+  }
+  
+  /* Estilo para la barra de desplazamiento de las reseñas */
+  .reviewsContainer::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .reviewsContainer::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+  }
+  
+  .reviewsContainer::-webkit-scrollbar-track {
+    background-color: lightgray;
+  }
+    
