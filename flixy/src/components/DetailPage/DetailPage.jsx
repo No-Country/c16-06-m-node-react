@@ -75,7 +75,7 @@ const [showReviews, setShowReviews] = useState(false);
         ))}
       </div>
 
-     {/* Mostrar reseñas del documental seleccionado */}
+     {/* Mostrar reseñas del documental seleccionado directamente */}
      {selectedDocumentary.reviews && (
         <div className={`${styles.reviewsContainer} ${showReviews && styles.show}`}>
           <h3>Reseñas de {selectedDocumentary.nameOriginal}</h3>

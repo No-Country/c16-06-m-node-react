@@ -75,4 +75,37 @@
     background-color: lightgray;
   }
 
+  /* ... Estilos anteriores */
+
+  .reviewsContainer {
+    margin-top: 20px;
+    border: 2px solid #fff; /* Cambiado a un borde sólido de 2px de ancho */
+    border-radius: 10px; /* Añadido un borde redondeado para un aspecto más suave */
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añadida una suave sombra para resaltar el contenedor */
+    color: #333
+  }
   
+  .show {
+    display: block;
+  }
+  
+  .reviewItem {
+    border-bottom: 1px solid #33FFD7;
+    padding: 10px 0;
+  }
+  
+  /* Estilo para la barra de desplazamiento de las reseñas */
+  .reviewsContainer::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .reviewsContainer::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+  }
+  
+  .reviewsContainer::-webkit-scrollbar-track {
+    background-color: lightgray;
+  }
+    
