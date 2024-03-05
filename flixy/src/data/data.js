@@ -1425,7 +1425,7 @@ const data = [
     category: ["Documentary", "Music", "Suspense"],
     duration: "1h 31min",
     certification: "GP",
-    trailer: "https://www.youtube.com/watch?v=GUoJgnV0YIA",
+    trailer: "https://www.youtube.com/watch?v=x7UsBmavjsE",
     description:
       "Cuando trescientos mil miembros de la Generación del Amor chocaron con unos pocos docenas de Hells Angels en el Autódromo Altamont de San Francisco, la sangrienta confrontación que transformó los sueños de toda una década en desilusión quedó inmortalizada en esta película.",
     reviews: [
@@ -1818,11 +1818,11 @@ const data = [
     year: "1990",
     score: "8.2",
     director: ["Jennie Livingston"],
-    streaming: ["PrimeVideo"],
+    streaming: ["PrimeVideo", "Youtube"],
     category: ["Indie"],
     duration: "1h 18min",
     certification: "R",
-    trailer: "https://www.youtube.com/watch?v=2xrwoYSNFbg",
+    trailer: "https://www.youtube.com/watch?v=9SqvD1-0odY",
     description:
       "Una crónica de la escena drag neoyorquina de los años 80, centrada en los bailes, la moda, las ambiciones y los sueños de quienes dieron a la época su calidez y vitalidad.",
     reviews: [
