@@ -2,7 +2,7 @@ import React from "react";
 import {button, btn1, btn2, btn3} from "./Button.module.css";
 import Link from "next/link";
 
-const Button = ({children, className, to}) => {
+const Button = ({children, className, to, style}) => {
 
     let styles = {
         btn1,
@@ -14,8 +14,8 @@ const Button = ({children, className, to}) => {
     <>
       {
         typeof(to) === "string" ? 
-        <Link className={[button, styles[className]].join(" ")} href={to}>{children}</Link> : 
-        <button className={[button, styles[className]].join(" ")}>{children}</button>
+        <Link style={style} className={[button, styles[className]].join(" ")} href={to}>{children}</Link> : 
+        <button style={style} className={[button, styles[className]].join(" ")}>{children}</button>
       }
     </>
   );

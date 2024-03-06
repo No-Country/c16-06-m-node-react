@@ -62,8 +62,14 @@ const Navbar = () => {
       </Link> */}
 
       <div className={styles.buttonZone}>
-        <Button className="btn2">Registarse</Button>
-        <Button className="btn1">Iniciar sesión</Button>
+        {/* Página de registro de usuario */}
+        <Link href="@/Registrarse/Registrarse">  
+          <Button className="btn2">Registarse</Button>
+        </Link>
+        {/* Página de inicio de sesión */}
+        <Link href="@Inicio/Inicio">
+          <Button className="btn1">Iniciar sesión</Button>
+        </Link>
       </div>
       
         

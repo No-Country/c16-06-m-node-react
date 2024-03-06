@@ -4,6 +4,17 @@
     margin: 0 auto;
     padding: 20px;
   }
+
+  .heroImg {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 21/9;
+    padding: 120px 0;
+    background-color: #0005; 
+    background-blend-mode: darken;
+  }
   
   .poster {
     width: 100%;
@@ -13,32 +24,60 @@
   }
   
   .properties {
-    margin-bottom: 20px;
+    max-width: var(--max-width);
+    width: var(--section-width);
+    margin: 0 auto;
+  }
+  
+  .properties > * {
+    max-width: 1000px;
   }
   
   .title {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: var(--heading-3);
+    color: var(--primary-400);
+    margin-top: 40px;
+    /* margin-bottom: 10px; */
   }
   
   .subtitle {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: var(--subtitle-1);
+    margin-top: 20px;
+    /* margin-bottom: 10px; */
   }
   
   .info {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: var(--caption);
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
   }
   
   .description {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: var(--body-2);
+    margin-top: 20px;
+    /* margin-bottom: 10px; */
   }
   
   .videoContainer {
     /* Ajusta el espacio entre la sección de propiedades y el video según sea necesario */
+    margin-bottom: var(--section-top-marging);
   }
+
+  .trailerSection {
+    max-width: var(--max-width); 
+    width: var(--section-width); 
+    margin: 0 auto; 
+    margin-top: var(--section-top-marging);
+  }
+
+  .sectionCover {
+    max-width: unset;
+    margin-top: unset;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--neutral-800);
+  }
+
   .recommendedList {
     display: flex;
     overflow-x: auto;
@@ -52,14 +91,20 @@
   
   .recommendedItem {
     flex: 0 0 auto;
-    width: 200px; /* Ajusta el ancho de cada elemento según tus necesidades */
+    width: 430px; /* Ajusta el ancho de cada elemento según tus necesidades */
+    aspect-ratio: 9/16;
+    border-radius: 8px;
+    background-color: var(--neutral-900);
+    overflow: hidden;
+    border: 1px solid var(--primary-300);
   }
   
   .recommendedImage {
     width: 100%;
-    height: 100%; /* Cambiado a 100% para asegurar un tamaño consistente */
+    aspect-ratio: 4/3;
+    /*height: calc(100% - 20px);*/ /* Cambiado a 100% para asegurar un tamaño consistente */
     object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro del contenedor */
-    border-radius: 8px; /* Ajusta la esquina redondeada según tus necesidades */
+    /*border-radius: 8px;*/ /* Ajusta la esquina redondeada según tus necesidades */
   }
   
   /* Estilos específicos para Webkit (Chrome, Safari) */
@@ -75,8 +120,9 @@
     background-color: lightgray;
   }
 
+  
   /* ... Estilos anteriores */
-
+  
   .reviewsContainer {
     margin-top: 20px;
     border: 2px solid #fff; /* Cambiado a un borde sólido de 2px de ancho */
@@ -107,5 +153,74 @@
   
   .reviewsContainer::-webkit-scrollbar-track {
     background-color: lightgray;
+  }
+
+  .mainDiv {
+    background-color: var(--neutral-50);
+  }
+
+  .reviewsContainer:last-child {
+    margin-bottom: 20px;
+  }
+
+  .sectionTitle {
+    text-align:center; 
+    color:var(--primary-800); 
+    font-size:var(--subtitle-1);
+  }
+
+  .sectionDesc {
+    font-size:var(--body-2); 
+    color:var(--neutral-600); 
+    text-align:center; 
+    margin-bottom:60px;
+    margin-top: 10px;
+  }
+
+  .reviewItem {
+    border-top: 1px solid var(--primary-800);
+    border-bottom: 1px solid var(--primary-800);
+    padding: 20px 0;
+    margin-top: 10px;
+  }
+
+  .user {
+    font-size: var(--subtitle-2);
+    color: var(--primary-900);
+  }
+
+  .comment {
+    font-size: var(--body-2);
+    color: var(--neutral-600);
+  }
+
+  .cardDesc {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--neutral-900);
+    height: 57%;
+    padding: 15px;
+  }
+
+  .cardTitleE {
+    font-size: var(--subtitle-2);
+    color: var(--neutral-10);
+  }
+
+  .cardTitleS {
+    font-size: var(--body-2);
+    color: var(--primary-300);
+  }
+
+  .cardInfo {
+    font-size: var(--body-2);
+    color: var(--neutral-300);
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
     
