@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player';
 import Trailer from '../Trailer/Trailer';
 import Recommendations from '../Recommendations/Recommendations';
 import StarRatings from 'react-star-ratings'; // Importa la biblioteca
-
+import Image from 'next/image';
 import data from '@/data/data';
 import styles from './detailPage.module.css';
 import Rating from '../Rating/Rating';
@@ -76,11 +76,12 @@ const [showReviews, setShowReviews] = useState(false);
         <div className={styles.recommendedList}>
           {recommendedDocumentaries.map((doc) => (
             <div key={doc.id} className={styles.recommendedItem}>
-              <img
+              
+              <Imagen
                 src={doc.image2}
                 alt={`${doc.nameSpanish || doc.nameOriginal} Poster`}
                 className={styles.recommendedImage}
-              />
+                />
               <div className={styles.cardDesc}>
                 <h4 className={styles.cardTitleE}>{doc.nameOriginal}</h4>
 
