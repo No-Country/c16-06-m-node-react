@@ -52,14 +52,20 @@
   
   .recommendedItem {
     flex: 0 0 auto;
-    width: 200px; /* Ajusta el ancho de cada elemento según tus necesidades */
+    width: 430px; /* Ajusta el ancho de cada elemento según tus necesidades */
+    aspect-ratio: 9/16;
+    border-radius: 8px;
+    background-color: var(--neutral-900);
+    overflow: hidden;
+    border: 1px solid var(--primary-300);
   }
   
   .recommendedImage {
     width: 100%;
-    height: 100%; /* Cambiado a 100% para asegurar un tamaño consistente */
+    aspect-ratio: 4/3;
+    /*height: calc(100% - 20px);*/ /* Cambiado a 100% para asegurar un tamaño consistente */
     object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro del contenedor */
-    border-radius: 8px; /* Ajusta la esquina redondeada según tus necesidades */
+    /*border-radius: 8px;*/ /* Ajusta la esquina redondeada según tus necesidades */
   }
   
   /* Estilos específicos para Webkit (Chrome, Safari) */
@@ -147,5 +153,35 @@
   .comment {
     font-size: var(--body-2);
     color: var(--neutral-600);
+  }
+
+  .cardDesc {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--neutral-900);
+    height: 57%;
+    padding: 15px;
+  }
+
+  .cardTitleE {
+    font-size: var(--subtitle-2);
+    color: var(--neutral-10);
+  }
+
+  .cardTitleS {
+    font-size: var(--body-2);
+    color: var(--primary-300);
+  }
+
+  .cardInfo {
+    font-size: var(--body-2);
+    color: var(--neutral-300);
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
     
