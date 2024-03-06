@@ -139,7 +139,7 @@ const Home = () => {
             />
             <Filter
               label="Categorias"
-              options={['Comedy', 'Drama', 'Biography', 'Crime', 'Adventure', 'Sport', 'Documentary', 'Indie', 'History', 'Warlike', 'Music', 'Short Film', 'News', 'Family', 'Suspense']}
+              options={['Comedia', 'Drama', 'Biografia', 'Crimen', 'Aventura', 'Deporte', 'Documental', 'Independiente', 'Historia', 'Belico', 'Musica', 'Corto', 'Noticias', 'Familiar', 'Suspenso']}
               selectedValue={selectedFilters.category}
               onChange={(value) => handleFilterChange('category', value)}
             />
