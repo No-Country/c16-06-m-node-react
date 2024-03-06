@@ -44,9 +44,9 @@ const SearchBar = ({ onSearch, onClearSearch }) => {
         </button>
       </form>
 
-      {/* Estilos para la paginación dentro del componente */}
+  
       <div className={styles.paginationContainer}>
-        {/* ... tus elementos de paginación aquí ... */}
+      
       </div>
     </div>
   );
