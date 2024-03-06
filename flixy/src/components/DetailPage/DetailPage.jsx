@@ -7,7 +7,7 @@ import Recommendations from '../Recommendations/Recommendations';
 import StarRatings from 'react-star-ratings'; // Importa la biblioteca
 
 import data from '@/data/data';
-import styles from './detailPage.module.css';
+import styles from './DetailPage.module.css';
 import Rating from '../Rating/Rating';
 import Button from '../Button/Button';
 
