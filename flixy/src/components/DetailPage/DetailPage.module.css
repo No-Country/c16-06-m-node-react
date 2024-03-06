@@ -4,6 +4,17 @@
     margin: 0 auto;
     padding: 20px;
   }
+
+  .heroImg {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 21/9;
+    padding: 120px 0;
+    background-color: #0005; 
+    background-blend-mode: darken;
+  }
   
   .poster {
     width: 100%;
@@ -13,27 +24,38 @@
   }
   
   .properties {
-    margin-bottom: 20px;
+    max-width: var(--max-width);
+    width: var(--section-width);
+    margin: 0 auto;
+  }
+  
+  .properties > * {
+    max-width: 1000px;
   }
   
   .title {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: var(--heading-3);
+    color: var(--primary-400);
+    margin-top: 40px;
+    /* margin-bottom: 10px; */
   }
   
   .subtitle {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: var(--subtitle-1);
+    margin-top: 20px;
+    /* margin-bottom: 10px; */
   }
   
   .info {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: var(--caption);
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
   }
   
   .description {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: var(--body-2);
+    margin-top: 20px;
+    /* margin-bottom: 10px; */
   }
   
   .videoContainer {

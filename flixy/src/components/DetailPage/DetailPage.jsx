@@ -41,20 +41,23 @@ const [showReviews, setShowReviews] = useState(false);
   return (
     <div className={styles.mainDiv}>
       {/* Imagen */}
-      <img
+      {/* <img
         src={selectedDocumentary.image2}
         alt={`${selectedDocumentary.nameSpanish || selectedDocumentary.nameOriginal} Poster`}
         className={styles.poster}
-      />
-
-      {/* Propiedades */}
-      <div className={styles.properties}>
-        <h1 className={styles.title}>{selectedDocumentary.nameOriginal}</h1>
-        <h2 className={styles.subtitle}>{selectedDocumentary.nameSpanish}</h2>
-        <p className={styles.info}>{selectedDocumentary.year}|{selectedDocumentary.duration} | {selectedDocumentary.category.join(', ')} | {selectedDocumentary.score}</p>
-        <p className={styles.info}>Director: {selectedDocumentary.director.join(', ')}</p>
-        <h3 className={styles.description}>Descripción: {selectedDocumentary.description}</h3>
-      </div>
+      /> */}
+      <section style={{width:"100%", maxWidth:"unset", margin:"unset"}}>
+        <div className={styles.heroImg} style={{backgroundImage:"linear-gradient(90deg, black, transparent 60%, black), url("+selectedDocumentary.image2+")"}}>
+          {/* Propiedades */}
+          <div className={styles.properties}>
+            <h1 className={styles.title}>{selectedDocumentary.nameOriginal}</h1>
+            <h2 className={styles.subtitle}>{selectedDocumentary.nameSpanish}</h2>
+            <p className={styles.info}>{selectedDocumentary.year} | {selectedDocumentary.duration} | {selectedDocumentary.category.join(', ')} | {selectedDocumentary.score}</p>
+            <p className={styles.info} style={{color:"var(--primary-200)"}}>Director: {selectedDocumentary.director.join(', ')}</p>
+            <p className={styles.description}>{selectedDocumentary.description}</p>
+          </div>
+        </div>
+      </section>
 
       <section className={styles.sectionCover} style={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
         {/* Video */}
@@ -65,7 +68,7 @@ const [showReviews, setShowReviews] = useState(false);
           </div>
         </div>
       </section>
-      
+
       <section>
         {/* Recomendaciones con scroll horizontal */}
         <h3 className={styles.sectionTitle}>Recomendados para ti</h3>
