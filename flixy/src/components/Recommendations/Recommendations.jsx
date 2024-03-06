@@ -1,5 +1,6 @@
 // components/Recommendations/Recommendations.js
 import React from "react";
+import Image from "next/image";
 
 const Recommendations = ({ recommendedDocumentaries }) => {
   return (
@@ -8,7 +9,7 @@ const Recommendations = ({ recommendedDocumentaries }) => {
       <div className="recommended-list">
         {recommendedDocumentaries.map((doc) => (
           <div key={doc.id}>
-            <img src={doc.image} alt={doc.nameOriginal} />
+            <Image src={doc.image} alt={doc.nameOriginal} />
             <p>{doc.nameOriginal}</p>
           </div>
         ))}
