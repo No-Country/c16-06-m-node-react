@@ -56,12 +56,16 @@ const [showReviews, setShowReviews] = useState(false);
         <h3 className={styles.description}>Descripción: {selectedDocumentary.description}</h3>
       </div>
 
-      {/* Video */}
-      <div className={styles.videoContainer}>
-        {/* Nuevo componente para mostrar el trailer */}
-        <Trailer trailerUrl={selectedDocumentary.trailer} />
-      </div>
-
+      <section className={styles.sectionCover} style={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
+        {/* Video */}
+        <div className={styles.trailerSection}>
+          <div className={styles.videoContainer}>
+            {/* Nuevo componente para mostrar el trailer */}
+            <Trailer trailerUrl={selectedDocumentary.trailer} />
+          </div>
+        </div>
+      </section>
+      
       <section>
         {/* Recomendaciones con scroll horizontal */}
         <h3 className={styles.sectionTitle}>Recomendados para ti</h3>
