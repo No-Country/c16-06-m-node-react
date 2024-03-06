@@ -8,6 +8,7 @@ import StarRatings from 'react-star-ratings'; // Importa la biblioteca
 
 import data from '@/data/data';
 import styles from './detailPage.module.css';
+import Rating from '../Rating/Rating';
 
 const DocumentaryDetailPage = () => {
   const { id } = useParams();
@@ -37,7 +38,7 @@ const [showReviews, setShowReviews] = useState(false);
     .slice(0, 10);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.mainDiv}>
       {/* Imagen */}
       <img
         src={selectedDocumentary.image2}
@@ -75,19 +76,23 @@ const [showReviews, setShowReviews] = useState(false);
         ))}
       </div>
 
-     {/* Mostrar reseñas del documental seleccionado directamente */}
-     {selectedDocumentary.reviews && (
-        <div className={`${styles.reviewsContainer} ${showReviews && styles.show}`}>
-          <h3>Reseñas de {selectedDocumentary.nameOriginal}</h3>
-          {selectedDocumentary.reviews.map((review, index) => (
-            <div key={index} className={styles.reviewItem}>
-              <p>{review.user}</p>
-              <p>{review.comment}</p>
-              <p>Rating: {review.rating}</p>
+      <section style={{paddingBottom: "20px"}}>
+        {/* Mostrar reseñas del documental seleccionado */}
+        {selectedDocumentary.reviews && (
+            <div className={`${styles.reviewsContainer} ${showReviews && styles.show}`}>
+              <h3 className={styles.sectionTitle}>Reseñas</h3>
+              <p className={styles.sectionDesc}>Echa un vistazo de lo que dice la gente</p>
+              {selectedDocumentary.reviews.map((review, index) => (
+                <div key={index} className={styles.reviewItem}>
+                  <p className={styles.user}>{review.user}</p>
+                  <p className={styles.comment}>{review.comment}</p>
+                  {/* <p>Rating: {review.rating}</p> */}
+                  <Rating score={(review.rating * 2)+""}/>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      )}
+          )}
+      </section>
     </div>
   );
 };
