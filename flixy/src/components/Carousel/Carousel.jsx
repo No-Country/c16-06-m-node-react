@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import Link from 'next/link';
 import data from '@/data/data';
 import styles from './Carousel.module.css';
 
@@ -18,8 +19,8 @@ const Carousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,  // Agrega esta propiedad para habilitar el autoplay
-    autoplaySpeed: 3000,  // Configura la velocidad de cambio en milisegundos (3 segundos en este ejemplo)
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
   return (
@@ -27,12 +28,22 @@ const Carousel = () => {
       <Slider {...carouselSettings}>
         {selectedDocumentaries.map((documentary) => (
           <div key={documentary.id} className={styles.carouselSlide}>
-            {/* Contenido del slide */}
-            <img src={documentary.image2} alt={documentary.title} />
+           
+            <Link href="/[id]" as={`/${documentary.id}`}>
+            
+            
+                <img src={documentary.image2} alt={documentary.title} />
+              
+            </Link>
             <div className={styles.carouselTextOverlay}>
               <h3>{documentary.nameOriginal}</h3>
               <p>{documentary.description}</p>
-              <Button className="btn3">Ver ahora</Button>
+             
+              <Link href="/[id]" as={`/${documentary.id}`}>
+                
+                  <Button className="btn3">Ver ahora</Button>
+                
+              </Link>
             </div>
           </div>
         ))}
