@@ -1,4 +1,3 @@
-// pages/detailPage.js
 import React from 'react';
 import DocumentaryDetailPage from '@/components/DetailPage/DetailPage';
 
