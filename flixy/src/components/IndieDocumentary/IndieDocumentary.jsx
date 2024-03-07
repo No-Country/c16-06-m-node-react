@@ -6,7 +6,7 @@ import Rating from "../Rating/Rating";
 
 const IndieDocumentary = () => {
   const indieDocumentaries = data.filter((documentary) =>
-    documentary.category.includes("Indie")
+    documentary.category.includes("Independiente")
   );
 
   const {nameSpanish, year, image2, score} = indieDocumentaries[0];
