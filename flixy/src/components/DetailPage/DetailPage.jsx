@@ -46,6 +46,8 @@ const [showReviews, setShowReviews] = useState(false);
         src={selectedDocumentary.image2}
         alt={`${selectedDocumentary.nameSpanish || selectedDocumentary.nameOriginal} Poster`}
         className={styles.poster}
+        width={800} 
+        height={600}
       /> 
       <section style={{width:"100%", maxWidth:"unset", margin:"unset"}}>
         <div className={styles.heroImg} style={{backgroundImage:"linear-gradient(90deg, black, transparent 60%, black), url("+selectedDocumentary.image2+")"}}>

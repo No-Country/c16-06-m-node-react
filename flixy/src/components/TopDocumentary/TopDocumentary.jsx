@@ -21,6 +21,8 @@ const TopDocumentary = () => {
               src={documentary.image}
               alt={documentary.nameOriginal}
               className={styles.documentaryImage}
+              width={800}
+              height={600}
             />
             <div className={styles.documentaryDetails}>
               <h3>{documentary.nameOriginal}</h3>

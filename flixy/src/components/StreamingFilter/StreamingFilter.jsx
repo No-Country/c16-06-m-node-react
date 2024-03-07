@@ -25,6 +25,8 @@ const StreamingFilter = ({ selectedValue, onChange, onClear }) => {
               <Image
                 src={`/streaming/${platform.toLowerCase().replace(/\s+/g, '-')}.svg`}
                 alt={platform}
+                width={50}
+                height={50}
               />
             </button>
             {platform === selectedValue && (

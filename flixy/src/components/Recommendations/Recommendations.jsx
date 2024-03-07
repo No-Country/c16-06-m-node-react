@@ -9,7 +9,12 @@ const Recommendations = ({ recommendedDocumentaries }) => {
       <div className="recommended-list">
         {recommendedDocumentaries.map((doc) => (
           <div key={doc.id}>
-            <Image src={doc.image} alt={doc.nameOriginal} />
+            <Image
+              src={doc.image}
+              alt={doc.nameOriginal}
+              width={800}
+              height={600}
+            />
             <p>{doc.nameOriginal}</p>
           </div>
         ))}
