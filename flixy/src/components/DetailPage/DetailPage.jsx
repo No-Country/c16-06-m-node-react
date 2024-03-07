@@ -10,6 +10,7 @@ import data from '@/data/data';
 import styles from './DetailPage.module.css';
 import Rating from '../Rating/Rating';
 import Button from '../Button/Button';
+import Image from 'next/image';
 
 const DocumentaryDetailPage = () => {
   const { id } = useParams();
@@ -40,12 +41,12 @@ const [showReviews, setShowReviews] = useState(false);
 
   return (
     <div className={styles.mainDiv}>
-      {/* Imagen */}
-      {/* <img
+      
+      <Image
         src={selectedDocumentary.image2}
         alt={`${selectedDocumentary.nameSpanish || selectedDocumentary.nameOriginal} Poster`}
         className={styles.poster}
-      /> */}
+      /> 
       <section style={{width:"100%", maxWidth:"unset", margin:"unset"}}>
         <div className={styles.heroImg} style={{backgroundImage:"linear-gradient(90deg, black, transparent 60%, black), url("+selectedDocumentary.image2+")"}}>
           {/* Propiedades */}
