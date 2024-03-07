@@ -7,10 +7,12 @@ const DocumentaryCard = ({ documentary }) => {
   return (
     <div className={styles.documentaryCard}>
       <Link href="/[id]" as={`/${documentary.id}`}>
-        <img
+        <Image
           src={documentary.image}
           alt={documentary.nameSpanish || documentary.nameOriginal}
           className={styles.documentaryImage}
+          width={300}
+          height={300}
         />
         <div className={styles.documentaryDetails}>
           <p>{documentary.category.join("| ")}</p>
