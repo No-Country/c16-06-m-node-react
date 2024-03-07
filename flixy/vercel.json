@@ -6,6 +6,6 @@
     ],
     "routes": [
       { "handle": "filesystem" },
-      { "src": "/.*", "dest": "/index.html" }
+      { "src": "/.*", "dest": "https://c16-06-m-node-react-jimemena91s-projects.vercel.app/" }
     ]
   }
