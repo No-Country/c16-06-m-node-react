@@ -7,6 +7,7 @@ import styles from './Carousel.module.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Button from '../Button/Button';
+import Image from 'next/image';
 
 const Carousel = () => {
   const selectedDocumentaries = data.filter(
@@ -32,7 +33,7 @@ const Carousel = () => {
             <Link href="/[id]" as={`/${documentary.id}`}>
             
             
-                <img src={documentary.image2} alt={documentary.title} />
+                <Image src={documentary.image2} alt={documentary.title} />
               
             </Link>
             <div className={styles.carouselTextOverlay}>

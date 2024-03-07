@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
 import styles from './CardDocumentary.module.css';
 
 const DocumentaryCard = ({ documentary }) => {
@@ -12,7 +13,7 @@ const DocumentaryCard = ({ documentary }) => {
             <p>{documentary.category.join('| ')}</p>
             <div className={styles.streamingLogos}>
               {documentary.streaming.map((stream, index) => (
-                <img
+                <Image
                   key={index}
                   src={`/logos/${stream}.svg`}
                   alt={stream}

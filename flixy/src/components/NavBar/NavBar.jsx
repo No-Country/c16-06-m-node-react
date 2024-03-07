@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-// import Image from 'next/image';
+import Image from 'next/image';
 // import {UserCircle} from "@phosphor-icons/react/dist/ssr"
 // import Image from 'next/image';
 // import { UserCircle } from "@phosphor-icons/react/dist/ssr";
 
-import styles from './Navbar.module.css';
+import styles from './NavBar.module.css';
 import Button from '../Button/Button';
 
 const Navbar = () => {
@@ -15,10 +15,10 @@ const Navbar = () => {
         <Link href="/">
 
           <span>
-            {/* <Image src="/logoFlixi/flixy logo.svg" alt="Logo" width={50} height={50} /> */}
-            <i className='navbarLogo'></i>
+            <Image src="/logoFlixi/flixy logo.svg" alt="Logo" width={50} height={50} />
+          
           </span>
-          {/* Envuelve la imagen con Link */}
+         
           
             {/* <Image src="/logoFlixi/flixy logo.svg" alt="Logo" width={50} height={50} /> */}
           
