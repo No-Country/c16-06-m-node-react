@@ -5,7 +5,7 @@ import Image from 'next/image';
 // import Image from 'next/image';
 // import { UserCircle } from "@phosphor-icons/react/dist/ssr";
 
-import styles from './Navbar.module.css';
+import styles from './NavBar.module.css';
 import Button from '../Button/Button';
 
 const Navbar = () => {
