@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './StreamingFilter.module.css';
 
 const streamingPlatforms = [
@@ -21,7 +22,7 @@ const StreamingFilter = ({ selectedValue, onChange, onClear }) => {
               className={`${styles.iconButton} ${platform === selectedValue ? styles.selected : ''}`}
               onClick={() => onChange(platform)}
             >
-              <img
+              <Image
                 src={`/streaming/${platform.toLowerCase().replace(/\s+/g, '-')}.svg`}
                 alt={platform}
               />

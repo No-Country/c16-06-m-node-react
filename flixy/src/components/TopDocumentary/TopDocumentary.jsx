@@ -1,5 +1,6 @@
 import React from "react";
 import data from "@/data/data";
+import Image from "next/image";
 import styles from "./TopDocumentary.module.css";
 
 const TopDocumentary = () => {
@@ -16,7 +17,7 @@ const TopDocumentary = () => {
             key={documentary.nameOriginal}
             className={styles.documentaryCard}
           >
-            <img
+            <Image
               src={documentary.image}
               alt={documentary.nameOriginal}
               className={styles.documentaryImage}
