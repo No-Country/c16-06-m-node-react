@@ -11,11 +11,22 @@ import styles from './detailPage.module.css';
 import Rating from '../Rating/Rating';
 import Button from '../Button/Button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const DocumentaryDetailPage = () => {
   const { id } = useParams();
   const [userRating, setUserRating] = useState(0);
 const [showReviews, setShowReviews] = useState(false);
+
+let platformLinks = {
+  Apple:"https://tv.apple.com/?l=es-CO",
+  Netflix:"https://www.netflix.com/",
+  Disney:"https://www.disneyplus.com/es-co",
+  Google:"https://www.google.com",
+  Max:"https://www.max.com/",
+  PrimeVideo:"https://www.primevideo.com/",
+  Youtube:"https://www.youtube.com"
+}
 
 
   if (!id) {
@@ -52,6 +63,52 @@ const [showReviews, setShowReviews] = useState(false);
             <p className={styles.info}>{selectedDocumentary.year} | {selectedDocumentary.duration} | {selectedDocumentary.category.join(', ')} | {selectedDocumentary.score}</p>
             <p className={styles.info} style={{color:"var(--primary-200)"}}>Director: {selectedDocumentary.director.join(', ')}</p>
             <p className={styles.description}>{selectedDocumentary.description}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.sectionCover} style={{backgroundColor:"var(--neutral-800)"}}>
+        <div className={styles.documentaryInfoSection} style={{marginTop:"unset", padding:"60px 0 0 0"}}>
+          <div>
+            <p style={{textAlign:"center"}}>Puedes verlo en: </p>
+
+            <div className={styles.platformsList}>
+              {
+                selectedDocumentary.streaming.map((platform) => {
+                  let link = platform==="Disney+" ? "Disney" : platform
+
+                  return <>
+                    <Link href={platformLinks[link]} target='_blank' style={{marginTop:"20px"}}>
+                      <Image
+                        src={`/streaming/${platform}.svg`}
+                        alt={`Icono de ${platform}`}
+                        width={50}
+                        height={50}
+                      />
+                    </Link>
+                  </>
+                })
+              }
+            </div>
+          </div>
+
+          <div className={styles.documentaryRating}>
+            <span style={{color:"var(--primary-400)", fontSize:"var(--body-1)"}}>
+              Valoración media
+            </span>
+            
+            <div style={{display:"flex", justifyContent:"space-between", alignContent:"baseline", marginTop:"15px", gap:"5px"}}>
+              <p style={{fontSize:"var(--subtitle-2)", color:"var(--primary-400)"}}>
+                {
+                  selectedDocumentary.score
+                }
+                <span style={{fontSize:"var(--caption)", marginLeft:"2px", color:"var(--primary-600)"}}>
+                  /10
+                </span>
+              </p>
+
+              <Rating score={selectedDocumentary.score}/>
+            </div>
           </div>
         </div>
       </section>
