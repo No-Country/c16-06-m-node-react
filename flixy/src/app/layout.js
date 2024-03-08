@@ -21,9 +21,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </Head>
       <body className={inter.className}>
-        <Navbar/>
         {children}
-        <Footer />
       </body>
     </html>
   );

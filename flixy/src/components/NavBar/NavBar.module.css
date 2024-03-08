@@ -21,16 +21,6 @@
   position: relative;
 }
 
-.navList::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 200%;
-  align-self: center;
-  right: 15px;
-  background-color: var(--neutral-300);
-}
-
 .navItem {
   /* margin-right: 1rem; */
 }
@@ -48,6 +38,6 @@
 }
 
 .logo, .navList, .buttonZone {
-  width: 30%;
+  width: 27%;
 }
   

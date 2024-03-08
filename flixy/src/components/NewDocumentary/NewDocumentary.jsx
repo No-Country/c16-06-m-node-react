@@ -14,7 +14,7 @@ const NewDocumentary = ({list}) => {
           <h4 className={title}>Populares de Flixy</h4>
           <div className={newDocumentaryList}>
             {
-              NewDocumentaries.map(({nameSpanish, year, image, score}) => {
+              NewDocumentaries.map(({nameSpanish, year, image, score, id}) => {
                 return <>
                 <div className={newDocumentary} key={nameSpanish} style={{backgroundImage:"url("+image+")"}}>
                   <span className={cardSign}>Nuevo</span>
@@ -34,7 +34,7 @@ const NewDocumentary = ({list}) => {
                       <span style={{alignSelf:"center", color:"var(--neutral50)", fontSize:"var(--body-1)"}}>{year}</span>
                     </div>
 
-                    <Button className="btn3">Ver ahora</Button>
+                    <Button className="btn3"  to="/[id]" as={`/${id}`}>Ver ahora</Button>
                   </div>
                 </div>
                 </>

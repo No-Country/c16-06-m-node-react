@@ -7,7 +7,7 @@ import Recommendations from '../Recommendations/Recommendations';
 import StarRatings from 'react-star-ratings'; // Importa la biblioteca
 
 import data from '@/data/data';
-import styles from './DetailPage.module.css';
+import styles from './detailPage.module.css';
 import Rating from '../Rating/Rating';
 import Button from '../Button/Button';
 import Image from 'next/image';
@@ -73,10 +73,14 @@ const [showReviews, setShowReviews] = useState(false);
         <div className={styles.recommendedList}>
           {recommendedDocumentaries.map((doc) => (
             <div key={doc.id} className={styles.recommendedItem}>
-              <img
-                src={doc.image2}
+              <Image
+                src={`${doc.image2}`}
                 alt={`${doc.nameSpanish || doc.nameOriginal} Poster`}
                 className={styles.recommendedImage}
+                width={0}
+                height={0}
+                style={{width:"100%", height:"35%"}}
+                loader={() => doc.image2}
               />
               <div className={styles.cardDesc}>
                 <h4 className={styles.cardTitleE}>{doc.nameOriginal}</h4>
@@ -99,7 +103,7 @@ const [showReviews, setShowReviews] = useState(false);
                 <p style={{ color:"var(--neutral-200)",marginTop:"20px"}}>{doc.description}</p>
                 
                 {/* <button style={{margin:"auto 0 0 0"}} onClick={() => handleShowReviews(doc.id)}>Ver Reseñas</button> */}
-                <Button className="btn2" style={{margin:"auto 0 0 0"}}>Ver</Button>
+                <Button className="btn2" style={{margin:"auto 0 0 0", display:"flex", justifyContent:"center"}}  to="/[id]" as={`/${doc.id}`}>Ver</Button>
               </div>
             </div>
           ))}
