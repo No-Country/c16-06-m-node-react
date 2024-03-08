@@ -1,0 +1,60 @@
+.loginSection {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.section1{
+    width: 55%;
+    background-image: url("../../../public/Group\ 27.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 120px 80px;
+}
+
+.section2{
+    width: 45%;
+    padding: 120px 80px;
+    background-color: var(--neutral-800);
+}
+
+.s1Title, .s2Title {
+    font-size: var(--heading-5);
+    max-width: 500px;
+    color: var(--neutral-10);
+}
+
+.s1Title {
+    margin-top: 35px;
+}
+
+.s1Desc, .s2Desc {
+    font-size: var(--button);
+}
+
+.s1Desc {
+    margin-top: 10px;
+}
+
+.s2Desc {
+    margin-bottom: 20px;
+}
+
+.initSection {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 24px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: var(--body-1);
+    background-color: var(--neutral-10);
+    color: var(--neutral-900);
+}

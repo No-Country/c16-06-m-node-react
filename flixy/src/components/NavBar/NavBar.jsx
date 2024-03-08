@@ -70,7 +70,7 @@ const Navbar = () => {
           <Button className="btn2">Registarse</Button>
         </Link>
         {/* Página de inicio de sesión */}
-        <Link href="@Inicio/Inicio">
+        <Link href="/login">
           <Button className="btn1">Iniciar sesión</Button>
         </Link>
       </div>
