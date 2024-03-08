@@ -148,7 +148,7 @@ const Home = () => {
       </section>
 
       <section>
-              <h3>Lista de Documentales</h3>
+              <h3 style={{fontSize:"var(--heading-5)", color:"var(--primary-900)", textAlign:"center", fontWeight:"normal", marginBottom:"30px"}}>Lista de Documentales</h3>
               <div className={styles.documentaryList}>
                 {currentFilteredData.length > 0 ? (
                   currentFilteredData.map((documentary) => (

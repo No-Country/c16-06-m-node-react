@@ -183,3 +183,9 @@ a {
     color-scheme: dark;
   }
 }
+
+@media screen and (width:1366px) {
+  body {
+    --section-width: 95%;
+  }
+}

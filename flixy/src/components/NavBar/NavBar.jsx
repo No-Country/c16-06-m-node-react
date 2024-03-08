@@ -55,6 +55,9 @@ const Navbar = () => {
         </li>
       </ul>
      
+      <div style={{display:"flex", justifyContent:"center", width:"2px", height:"30px", backgroundColor:"white"}}>
+        |
+      </div>
 
       {/* <Link href="/login" >
       <UserCircle size={32} />  
