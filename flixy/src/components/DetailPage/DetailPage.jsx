@@ -103,7 +103,7 @@ const [showReviews, setShowReviews] = useState(false);
                 <p style={{ color:"var(--neutral-200)",marginTop:"20px"}}>{doc.description}</p>
                 
                 {/* <button style={{margin:"auto 0 0 0"}} onClick={() => handleShowReviews(doc.id)}>Ver Reseñas</button> */}
-                <Button className="btn2" style={{margin:"auto 0 0 0", display:"flex", justifyContent:"center"}}>Ver</Button>
+                <Button className="btn2" style={{margin:"auto 0 0 0", display:"flex", justifyContent:"center"}}  to="/[id]" as={`/${doc.id}`}>Ver</Button>
               </div>
             </div>
           ))}

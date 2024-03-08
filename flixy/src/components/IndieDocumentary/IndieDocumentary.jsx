@@ -9,7 +9,7 @@ const IndieDocumentary = () => {
     documentary.category.includes("Indie")
   );
 
-  const {nameSpanish, year, image2, score} = indieDocumentaries[0];
+  const {nameSpanish, year, image2, score, id} = indieDocumentaries[0];
 
   return (
     <>
@@ -32,7 +32,7 @@ const IndieDocumentary = () => {
               <span style={{alignSelf:"center", color:"var(--neutral50)", fontSize:"var(--body-1)"}}>{year}</span>
             </div>
 
-            <Button className="btn3">Ver ahora</Button>
+            <Button className="btn3"  to="/[id]" as={`/${id}`}>Ver ahora</Button>
           </div>
         </div>
       </section>
